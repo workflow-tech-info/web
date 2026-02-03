@@ -1,0 +1,167 @@
+.reviewsSection {
+    padding: 140px 0;
+    background-color: var(--background);
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.header {
+    margin-bottom: 80px;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    text-align: left;
+}
+
+.textSide {
+    flex: 1;
+}
+
+.imageSide {
+    flex: 1;
+}
+
+.guestImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.eyebrow {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+    letter-spacing: 0.1em;
+}
+
+.title {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 32px;
+}
+
+.badges {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+
+.badge {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge strong {
+    font-size: 24px;
+    color: var(--foreground);
+}
+
+.badge span {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.reviewCard {
+    background: var(--secondary-bg);
+    padding: 60px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.type {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+}
+
+.stars {
+    color: #FFD700;
+    display: flex;
+    gap: 2px;
+}
+
+.subtitle {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+}
+
+.quote {
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    font-style: italic;
+}
+
+.author {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-top: auto;
+}
+
+@media (max-width: 900px) {
+    .headerContent {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .badges {
+        justify-content: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reviewCard {
+        padding: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .badges {
+        gap: 20px;
+    }
+}

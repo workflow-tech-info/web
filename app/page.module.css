@@ -1,0 +1,127 @@
+.page {
+  min-height: 100vh;
+}
+
+.contact {
+  padding: 140px 0;
+  background-color: var(--background);
+  text-align: center;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.title {
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.015em;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  text-align: left;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.ctaBox {
+  margin-top: 60px;
+}
+
+.largeBtn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.largeBtn:hover {
+  transform: scale(1.02);
+  background: #1a3a18;
+}
+
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+}
+
+.value {
+  font-size: 19px;
+  color: var(--foreground);
+}
+
+.footer {
+  padding: 60px 0 120px;
+  /* Extra bottom padding for AvailabilityBar */
+  background-color: var(--secondary-bg);
+  border-top: 1px solid var(--glass-border);
+}
+
+.footerContainer {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.footerLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.footerLinks a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
