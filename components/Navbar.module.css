@@ -3,14 +3,12 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 52px;
+    height: 80px;
+    /* Taller for better spacing */
     display: flex;
     align-items: center;
     z-index: 1000;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--glass-border);
+    background: transparent;
     transition: background 0.3s ease;
 }
 
@@ -27,8 +25,9 @@
 .logo a {
     font-size: 19px;
     font-weight: 600;
-    color: var(--foreground);
+    color: #ffffff;
     letter-spacing: -0.01em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .links {
@@ -38,11 +37,12 @@
 }
 
 .links a {
-    font-size: 12px;
-    color: var(--foreground);
-    opacity: 0.8;
-    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.9;
+    font-weight: 500;
     transition: opacity 0.2s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .links a:hover {

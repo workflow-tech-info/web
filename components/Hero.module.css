@@ -1,170 +1,179 @@
 .hero {
-    min-height: 100vh;
+    position: relative;
+    height: 400vh;
+    /* Create scroll space */
+    background: #000;
+    color: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+}
+
+.stickyContainer {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #fafafa 0%, #ffffff 50%);
-    position: relative;
-    overflow: hidden;
+}
+
+.canvasWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Gradient Overlay to make text pop */
+.canvasWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.1) 40%,
+            rgba(0, 0, 0, 0.4) 80%,
+            rgba(0, 0, 0, 0.7) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.heroCanvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .container {
-    max-width: 1200px;
+    position: relative;
+    z-index: 3;
+    /* Above gradient overlay */
+    max-width: 1400px;
+    /* Wider for better edge alignment */
     width: 100%;
     margin: 0 auto;
-    padding: 80px 22px 60px;
+    padding: 0 40px 80px;
+    /* More padding at bottom */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    /* Align to right */
+    justify-content: flex-end;
+    /* Align to bottom */
+    height: 100%;
+    text-align: right;
 }
 
+/* Content, Title, Subtitle, Actions styles remain similar but ensuring they sit well */
 .content {
-    text-align: center;
-    margin-bottom: 64px;
-    max-width: 980px;
+    /* Margin top might not be needed if centered in 100vh sticky container */
+    max-width: 900px;
+    padding-top: 0;
+    margin-bottom: 20vh;
+    /* Lift slightly from very bottom */
+    text-align: right;
 }
 
 .title {
     font-size: 80px;
-    font-weight: 600;
+    font-weight: 700;
+    /* Bolder for impact */
     line-height: 1.05;
-    letter-spacing: -0.015em;
-    color: #1d1d1f;
+    letter-spacing: -0.02em;
+    color: #ffffff;
     margin: 0 0 24px 0;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    text-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    /* Stronger shadow */
 }
 
 .highlight {
-    display: inline-block;
-    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    display: block;
+    background: linear-gradient(135deg, #FFD700 10%, #FDB931 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    /* Fallback shadow since text-shadow doesn't always work with background-clip */
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
 }
 
 .subtitle {
     font-size: 28px;
-    line-height: 1.14286;
-    font-weight: 400;
-    letter-spacing: 0.007em;
-    color: #6e6e73;
-    margin: 0 auto 48px;
-    max-width: 800px;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-}
-
-.desktopBreak {
-    display: inline;
+    /* Slightly larger */
+    line-height: 1.4;
+    font-weight: 500;
+    /* Medium weight for readability */
+    color: #f5f5f7;
+    margin: 0 auto 40px;
+    max-width: 700px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    /* Dark shadow for contrast */
 }
 
 .actions {
     display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
 }
 
 .primaryBtn {
-    background: #0071e3;
-    color: #ffffff;
-    padding: 14px 28px;
+    background: #ffffff;
+    /* Stark white for Apple look */
+    color: #000000;
+    padding: 16px 32px;
     border-radius: 980px;
     border: none;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .primaryBtn:hover {
-    transform: translateY(-2px);
-    background: #0077ed;
-    box-shadow: 0 8px 20px rgba(0, 113, 227, 0.3);
-}
-
-.primaryBtn:active {
-    transform: translateY(0);
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .secondaryBtn {
-    background: transparent;
-    color: #0071e3;
-    padding: 14px 28px;
+    background: rgba(255, 255, 255, 0.2);
+    /* Frosted glass */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #ffffff;
+    padding: 16px 32px;
     border-radius: 980px;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
 }
 
 .secondaryBtn:hover {
-    background: rgba(0, 113, 227, 0.08);
-    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
-.secondaryBtn:active {
-    transform: translateY(0);
-}
-
-.imageWrapper {
-    width: 100%;
-    max-width: 1100px;
-    position: relative;
-}
-
-.heroImage {
-    width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.08);
-    transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+.desktopBreak {
     display: block;
 }
 
-.heroImage:hover {
-    transform: scale(1.01);
-    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.15), 0 12px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .title {
-        font-size: 64px;
-    }
-
-    .subtitle {
-        font-size: 24px;
-    }
-}
-
 @media (max-width: 768px) {
-    .hero {
-        min-height: auto;
-        padding: 60px 0;
-    }
-
-    .container {
-        padding: 40px 20px;
-    }
-
-    .content {
-        margin-bottom: 48px;
-    }
-
     .title {
         font-size: 48px;
-        line-height: 1.08;
-        margin-bottom: 20px;
     }
 
     .subtitle {
-        font-size: 21px;
-        line-height: 1.19;
-        margin-bottom: 36px;
+        font-size: 20px;
+        max-width: 90%;
     }
 
     .desktopBreak {
@@ -174,42 +183,14 @@
     .actions {
         flex-direction: column;
         width: 100%;
-        max-width: 320px;
+        max-width: 300px;
         margin: 0 auto;
-        gap: 12px;
+        gap: 16px;
     }
 
     .primaryBtn,
     .secondaryBtn {
         width: 100%;
-        padding: 16px 28px;
-        font-size: 17px;
+        text-align: center;
     }
-
-    .imageWrapper {
-        max-width: 100%;
-    }
-
-    .heroImage {
-        border-radius: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .title {
-        font-size: 40px;
-    }
-
-    .subtitle {
-        font-size: 19px;
-    }
-
-    .container {
-        padding: 32px 16px;
-    }
-}
-
-/* Smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
 }

@@ -15,7 +15,7 @@ const Food = () => {
                     className={styles.header}
                 >
                     <span className={styles.eyebrow}>The Culinary Experience</span>
-                    <h2 className={styles.title}>Shelf Discovery: <br />Authentic Kerala Flavors.</h2>
+                    <h2 className={styles.title}>Authentic Kerala Flavors: <br />A Taste of Home in Fort Kochi.</h2>
                 </motion.div>
 
                 <div className={styles.grid}>
@@ -27,21 +27,21 @@ const Food = () => {
                         className={styles.infoCard}
                     >
                         <p className={styles.desc}>
-                            Voted the best homemade breakfast in Fort Kochi, our dining experience is rooted in
-                            the <strong>"Shelf Discovery"</strong> trend—celebrating local, transparent sourcing.
+                            Voted the best homemade breakfast in Fort Kochi, our dining experience honors the true spirit of
+                            Kerala’s culinary heritage through locally sourced ingredients and time-honored traditional recipes.
                         </p>
                         <div className={styles.highlights}>
                             <div className={styles.highlight}>
-                                <strong>Farm-to-Table</strong>
-                                <p>Enjoy organic black pepper and fruits harvested directly from our garden.</p>
+                                <strong>Fresh & Local <span style={{ fontWeight: 400, opacity: 0.8 }}>| Premium Sourcing</span></strong>
+                                <p>We hand-select the finest organic spices and seasonal fruits from trusted local markets, ensuring every meal captures the vibrant, natural essence of Kerala.</p>
                             </div>
                             <div className={styles.highlight}>
-                                <strong>Traditional Delicacies</strong>
-                                <p>From fluffy Appams with Vegetable Stew to authentic Kerala Fish Molee.</p>
+                                <strong>Traditional Delicacies <span style={{ fontWeight: 400, opacity: 0.8 }}>| Heritage Recipes</span></strong>
+                                <p>Savor the classics of South India, from soft, fluffy Appams paired with creamy Vegetable Stew to our signature, slow-cooked Kerala Fish Molee.</p>
                             </div>
                             <div className={styles.highlight}>
-                                <strong>Personal Touch</strong>
-                                <p>Every meal is prepared by Ms. Judith, ensuring a homely experience.</p>
+                                <strong>Personal Touch <span style={{ fontWeight: 400, opacity: 0.8 }}>| Homely Hospitality</span></strong>
+                                <p>Every dish is personally crafted by Ms. Judith, bringing the warmth of a true Kerala home to your table for an unforgettable and authentic dining experience.</p>
                             </div>
                         </div>
                     </motion.div>
