@@ -31,8 +31,8 @@ const amenities = [
     },
     {
         category: "Lifestyle",
-        title: "Pet-friendly",
-        desc: "Child-safe play area & lush terrace.",
+        title: "Tropical Oasis",
+        desc: "Lush garden views & peaceful sit-out areas.",
         icon: <Heart size={24} />
     },
     {

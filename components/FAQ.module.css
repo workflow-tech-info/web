@@ -19,7 +19,8 @@
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #BF953F;
+    /* Premium Gold */
     margin-bottom: 12px;
     letter-spacing: 0.1em;
 }
@@ -29,38 +30,70 @@
     line-height: 1.1;
     text-align: center;
     letter-spacing: -0.015em;
+    color: var(--foreground);
 }
-
 
 .list {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 0;
 }
 
 .item {
     border-bottom: 1px solid var(--glass-border);
-    padding-bottom: 40px;
 }
 
 .item:last-child {
     border-bottom: none;
 }
 
+.questionButton {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.questionButton:hover .question {
+    color: #BF953F;
+}
+
 .question {
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin: 0;
     color: var(--foreground);
+    transition: color 0.3s ease;
+    padding-right: 20px;
+}
+
+.icon {
+    color: #BF953F;
+    stroke-width: 1.5px;
+}
+
+.answerWrapper {
+    overflow: hidden;
 }
 
 .answer {
-    font-size: 19px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
     color: var(--text-secondary);
+    padding-bottom: 32px;
 }
 
 @media (max-width: 768px) {
+    .faq {
+        padding: 80px 0;
+    }
+
     .title {
         font-size: 36px;
     }
@@ -71,5 +104,9 @@
 
     .answer {
         font-size: 16px;
+    }
+
+    .questionButton {
+        padding: 24px 0;
     }
 }
