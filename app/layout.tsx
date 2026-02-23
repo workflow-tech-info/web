@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import StructuredData from "@/components/StructuredData";
 
@@ -16,7 +17,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://edengardenkochi.com'),
+  metadataBase: new URL('https://edenstays.info'),
   title: "Eden Garden Farmstay | 300-Year-Old Heritage Sanctuary in Fort Kochi",
   description: "Experience the ultimate Glowmad retreat at Eden Garden. Sustainable living, authentic Kerala soul, and the best-rated heritage farmstay in Kochi 2026. Managed by Ms. Judith.",
   keywords: [
@@ -79,6 +80,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.variable}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-K51KVNM939"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K51KVNM939');
+          `}
+        </Script>
         <StructuredData />
         {children}
       </body>

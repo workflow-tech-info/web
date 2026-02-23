@@ -14,11 +14,12 @@ const Navbar = () => {
                     <Link href="/">Eden Garden</Link>
                 </div>
                 <div className={styles.links}>
-                    <Link href="#hero">Home</Link>
-                    <Link href="#heritage">Heritage</Link>
-                    <Link href="#amenities">Amenities</Link>
-                    <Link href="#faq">FAQ</Link>
-                    <Link href="#contact">Contact Us</Link>
+                    <Link href="/#hero">Home</Link>
+                    <Link href="/#heritage">Heritage</Link>
+                    <Link href="/#amenities">Amenities</Link>
+                    <Link href="/blog">Blog</Link>
+                    <Link href="/#faq">FAQ</Link>
+                    <Link href="/#contact">Contact Us</Link>
                     <button onClick={() => router.push('/booking')} className={styles.contactBtn}>
                         Book Now
                     </button>
