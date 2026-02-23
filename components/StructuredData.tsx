@@ -8,7 +8,7 @@ export default function StructuredData() {
         "@type": ["LodgingBusiness", "BedAndBreakfast"],
         "name": "Eden Garden Heritage Farmstay",
         "description": "Experience a 300-year-old heritage sanctuary in Fort Kochi. Sustainable farmstay with authentic Kerala soul, farm-to-table dining, and the best-rated heritage accommodation in Kochi.",
-        "image": "https://edengardenkochi.com/eden-garden-heritage-farmstay-exterior.jpg",
+        "image": "https://edenstays.info/eden-garden-heritage-farmstay-exterior.jpg",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Fort Kochi",
@@ -58,9 +58,9 @@ export default function StructuredData() {
         ],
         "checkinTime": "14:00",
         "checkoutTime": "11:00",
-        "petsAllowed": true,
+        "petsAllowed": false,
         "smokingAllowed": false,
-        "url": "https://edengardenkochi.com",
+        "url": "https://edenstays.info",
         "sameAs": [
             "https://www.instagram.com/edengardenkochi",
             "https://www.facebook.com/edengardenkochi"

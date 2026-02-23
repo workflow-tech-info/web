@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://edengardenkochi.com",
+    url: "https://edenstays.info",
     siteName: "Eden Garden Farmstay",
     title: "Eden Garden Farmstay | Heritage & Sustainable Living",
     description: "A masterclass in regenerative tourism tucked away in Fort Kochi.",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     creator: "@edengardenkochi",
   },
   alternates: {
-    canonical: "https://edengardenkochi.com",
+    canonical: "https://edenstays.info",
   },
 };
 
@@ -79,6 +79,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+      </head>
       <body className={inter.variable}>
         {/* Google Analytics */}
         <Script
