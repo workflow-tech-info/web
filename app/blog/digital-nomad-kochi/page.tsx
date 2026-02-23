@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import styles from "../[slug]/article.module.css";
+import styles from "../article.module.css";
 
 export const metadata: Metadata = {
     title: "Digital Nomad Fort Kochi: Best Workation in India | Eden Garden",
