@@ -35,8 +35,8 @@ const rooms = [
         name: "Deluxe Room (Triple)",
         desc: "Premium deluxe room with AC, triple occupancy",
         image: "/deluxe-triple-room-ac-kerala.jpg",
-        price: 3500,
-        priceStr: "₹3,500",
+        price: 4500,
+        priceStr: "₹4,500",
         availability: "1 room available",
         occupancy: "Triple Occupancy",
         amenities: "AC"

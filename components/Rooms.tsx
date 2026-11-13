@@ -58,8 +58,8 @@ const rooms = [
         availability: "1 room available",
         occupancy: "Triple Occupancy",
         amenities: "AC",
-        price: 3500,
-        priceStr: "₹3,500",
+        price: 4500,
+        priceStr: "₹4,500",
         images: [
             "/deluxe-triple-room-ac-kerala.jpg",
             "/deluxe-triple-gallery-1.jpg",
